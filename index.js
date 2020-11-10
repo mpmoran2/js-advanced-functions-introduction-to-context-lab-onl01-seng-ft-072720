@@ -11,7 +11,7 @@ function createEmployeeRecord (record) {
     }
 }
 
-// function createEmployeeRecords(recordArray) {
+function createEmployeeRecords(recordArray) {
 //     return recordArray.map(record => createEmployeeRecord(record))
 // }
 
@@ -64,3 +64,4 @@ function createEmployeeRecord (record) {
 //         return employee.firstName == name
 //     })
 // }
+// 
