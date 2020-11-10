@@ -22,11 +22,11 @@ function createTimeInEvent(employeeRecord, timeStamp){
     return employeeRecord
 }
 
-// function createTimeOutEvent(employeeRecord, timeStamp) {
-//     let date = timeStamp.split(' ');
-//     employeeRecord.timeOutEvents.push({type: 'TimeOut', hour: parseInt(date[1]), date: date[0]});
-//     return employeeRecord
-// }
+function createTimeOutEvent(employeeRecord, timeStamp) {
+    let date = timeStamp.split(' ');
+    employeeRecord.timeOutEvents.push({type: 'TimeOut', hour: parseInt(date[1]), date: date[0]});
+    return employeeRecord
+}
 
 // function hoursWorkedOnDate(employeeRecord, workRecord){
 //     let timeIn = employeeRecord.timeInEvents.find(function(record) {
