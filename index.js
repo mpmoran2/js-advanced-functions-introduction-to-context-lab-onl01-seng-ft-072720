@@ -44,24 +44,23 @@ function createTimeOutEvent(employeeRecord, timeStamp) {
 //     return hours * employeeRecord.payPerHour
 // }
 
-// function allWagesFor(employeeRecord){
-//     let dates = employeeRecord.timeInEvents.map(function(record){
-//         return record.date
-//     })
-//     let wages = dates.reduce(function(totalWages, date){
-//         return totalWages + wagesEarnedOnDate(employeeRecord, date)
-//     }, 0)
-//     return wages
-// }
+function allWagesFor(employeeRecord){
+    let dates = employeeRecord.timeInEvents.map(function(record){
+        return record.date
+    })
+    let wages = dates.reduce(function(totalWages, date){
+        return totalWages + wagesEarnedOnDate(employeeRecord, date)
+    }, 0)
+    return wages
+}
 
-// let calculatePayroll = function(employeeRecords){
-//     return employeeRecords.reduce(function(totalWorked, employeeRecord){
-//         return totalWorked + allWagesFor(employeeRecord)}, 0)
-// }
+let calculatePayroll = function(employeeRecords){
+    return employeeRecords.reduce(function(totalWorked, employeeRecord){
+        return totalWorked + allWagesFor(employeeRecord)}, 0)
+}
 
-// function findEmployeeByFirstName(employeeRecords, name){
-//     return employeeRecords.find(function(employee){
-//         return employee.firstName == name
-//     })
-// }
-// 
+function findEmployeeByFirstName(employeeRecords, name){
+    return employeeRecords.find(function(employee){
+        return employee.firstName == name
+    })
+}
