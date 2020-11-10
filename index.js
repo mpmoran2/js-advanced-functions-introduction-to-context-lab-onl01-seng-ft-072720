@@ -39,10 +39,10 @@ function createTimeOutEvent(employeeRecord, timeStamp) {
 //     return hoursWorked
 // }
 
-// function wagesEarnedOnDate(employeeRecord, workRecord){
-//     let hours = hoursWorkedOnDate(employeeRecord, workRecord)
-//     return hours * employeeRecord.payPerHour
-// }
+function wagesEarnedOnDate(employeeRecord, workRecord){
+    let hours = hoursWorkedOnDate(employeeRecord, workRecord)
+    return hours * employeeRecord.payPerHour
+}
 
 function allWagesFor(employeeRecord){
     let dates = employeeRecord.timeInEvents.map(function(record){
