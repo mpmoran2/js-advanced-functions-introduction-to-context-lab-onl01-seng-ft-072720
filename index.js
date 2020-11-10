@@ -12,15 +12,15 @@ function createEmployeeRecord (record) {
 }
 
 function createEmployeeRecords(recordArray) {
-//     return recordArray.map(record => createEmployeeRecord(record))
-// }
+    return recordArray.map(record => createEmployeeRecord(record))
+}
 
-// function createTimeInEvent(employeeRecord, timeStamp){
-//     let date = timeStamp.split(' ');
-//     employeeRecord.timeInEvents.push({type: 'TimeIn', hour: parseInt(date[1]), date: date[0] });
+function createTimeInEvent(employeeRecord, timeStamp){
+    let date = timeStamp.split(' ');
+    employeeRecord.timeInEvents.push({type: 'TimeIn', hour: parseInt(date[1]), date: date[0] });
 
-//     return employeeRecord
-// }
+    return employeeRecord
+}
 
 // function createTimeOutEvent(employeeRecord, timeStamp) {
 //     let date = timeStamp.split(' ');
