@@ -28,15 +28,16 @@ function createTimeOutEvent(employeeRecord, timeStamp) {
     return employeeRecord
 }
 
-function hoursWorkedOnDate(employeeRecord, workRecord){
-    let timeIn = employeeRecord.timeInEvents.find(function(record) {
-        return record.date = workRecord
+let hoursWorkedOnDate = function(employee, soughtDate){
+    let inEvent = employee.timeInEvents.find(function(e){
+        return e.date === soughtDate
     })
-    let timeOut = employeeRecord.timeOutEvents.find(function(record) {
-        return record.date = workRecord
+
+    let outEvent = employee.timeOutEvents.find(function(e){
+        return e.date === soughtDate
     })
-    let hoursWorked = (timeOut.hour - timeIn.hour) / 100
-    return hoursWorked
+
+    return (outEvent.hour - inEvent.hour) / 100
 }
 
 function wagesEarnedOnDate(employeeRecord, workRecord){
